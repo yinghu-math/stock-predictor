@@ -33,3 +33,4 @@ def get_prediction(payload: StockIn):
 def pong():
     return {"ping": "pong!"}
 
+

@@ -54,9 +54,9 @@ def convert(prediction_list):
         output[date] = data["trend"]
     return output
 
-
-'''
 if __name__ == "__main__":
+    ## This allows us to run the program in the terminal with two arguements 
+    ## python model.py --ticker <ticker name> --days <number of days>
     parser = argparse.ArgumentParser(description='Predict')
     parser.add_argument('--ticker', type=str, default='MSFT', help='Stock Ticker')
     parser.add_argument('--days', type=int, default=7, help='Number of days to predict')
@@ -66,4 +66,4 @@ if __name__ == "__main__":
     prediction_list = predict(ticker=args.ticker, days=args.days)
     output = convert(prediction_list)
     print(output)
-'''
+
